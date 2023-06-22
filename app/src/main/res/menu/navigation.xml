@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mHome"
+        android:title="Home"
+        android:icon="@drawable/ic_action_home_icon"/>
+    <item android:id="@+id/mHistory"
+        android:title="History"
+        android:icon="@drawable/ic_action_history"/>
+    <item android:id="@+id/mLogout"
+        android:title="Log out"
+        android:icon="@drawable/ic_action_logout_icon"
+        />
+</menu>
