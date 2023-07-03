@@ -23,7 +23,7 @@ public class UserListRoomAdapter extends RecyclerView.Adapter<UserListRoomAdapte
     List<Room> listRoom;
     private Context context;
 
-    public UserListRoomAdapter(List<Room> listRoom, Context context) {
+    public UserListRoomAdapter(Context context,List<Room> listRoom) {
         this.listRoom = listRoom;
         this.context = context;
     }

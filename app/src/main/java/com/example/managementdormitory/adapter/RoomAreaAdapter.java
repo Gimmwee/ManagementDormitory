@@ -23,7 +23,7 @@ public class RoomAreaAdapter extends RecyclerView.Adapter<RoomAreaAdapter.AreaRo
     List<User> areas;
     private Context context;
 
-    public RoomAreaAdapter(List<User> areas, Context context) {
+    public RoomAreaAdapter(Context context, List<User> areas) {
         this.areas = areas;
         this.context = context;
     }
