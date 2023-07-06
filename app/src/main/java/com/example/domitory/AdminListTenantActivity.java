@@ -33,8 +33,7 @@ public class AdminListTenantActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_list_tenant);
         initUi();
-//        Logout1();
-//        getListTenat();
+
     }
 
     private void initUi() {
@@ -57,66 +56,6 @@ public class AdminListTenantActivity extends AppCompatActivity {
         });
     }
 
-//    private void Logout1(){
-//        signOut_button3 = findViewById(R.id.logout_a3);
-//        signOut_button3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                FirebaseAuth.getInstance().signOut();
-//                Intent i = new Intent(getApplicationContext(), Login.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
-//    }
-
-
-//    private void rcv_listTenant(List<Booking> ListBooking, List<User> ListUser){
-//        List<TenantBEAN> tenantBEANList = new ArrayList<>();
-//        GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
-//        rcv_listTenant.setLayoutManager(layoutManager);
-//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL);
-//        rcv_listTenant.addItemDecoration(dividerItemDecoration);
-//        SessionManagement sessionManagement = new SessionManagement(getApplicationContext());
-//        User u1 = sessionManagement.getUser();
-//        //set tenant bean
-//        for(int  i=0;i<ListBooking.size();i++){
-//            if(ListBooking.get(i).getHost_id().equals(u1.getUser_id())) {
-//                TenantBEAN tenantBEAN = new TenantBEAN();
-//                for (int j = 0; j < ListUser.size(); j++) {
-//                    String type = ListBooking.get(i).getType().toString();
-//                    if (ListBooking.get(i).getTenant_id().equals(ListUser.get(j).getUser_id()) && getDayLeft(ListBooking.get(i).getExpire_date()) > 0 && type.equals("REGISTER")) {
-//                        tenantBEAN.setBooking_id(ListBooking.get(i).getBooking_id());
-//                        tenantBEAN.setRoom_id(ListBooking.get(i).getRoom_id());
-//                        tenantBEAN.setRoom_name(ListBooking.get(i).getRoom_name());
-//                        tenantBEAN.setRoom_price(ListBooking.get(i).getRoom_price());
-//                        tenantBEAN.setRoom_area(ListBooking.get(i).getRoom_area());
-//                        tenantBEAN.setRoom_floor(ListBooking.get(i).getRoom_floor());
-//                        tenantBEAN.setCreate_date(ListBooking.get(i).getCreate_dateBean());
-//                        tenantBEAN.setExpire_date(ListBooking.get(i).getExpire_date());
-//                        tenantBEAN.setHost_id(ListBooking.get(i).getHost_id());
-//                        tenantBEAN.setTenant_id(ListBooking.get(i).getTenant_id());
-//                        tenantBEAN.setType(ListBooking.get(i).getType().toString());
-//                        tenantBEAN.setNote(ListBooking.get(i).getNote());
-//                        tenantBEAN.setTenant_name(ListUser.get(j).getName());
-//                        tenantBEAN.setTenant_phone(ListUser.get(j).getPhone());
-//
-//                        if (getDayLeft(ListBooking.get(i).getExpire_date()) > 10) {
-//                            tenantBEAN.setDayLeft("Số ngày còn lại :" + getDayLeft(ListBooking.get(i).getExpire_date()));
-//                        } else if (getDayLeft(ListBooking.get(i).getExpire_date()) > 0) {
-//                            tenantBEAN.setDayLeft("Số ngày còn lại :" + getDayLeft(ListBooking.get(i).getExpire_date()) + "\nChú ý : sắp hết hạn");
-//                        }
-//                        tenantBEANList.add(tenantBEAN);
-//
-//                    }
-//                }
-//
-//            }
-//        }
-//
-//        mTenantAdapter = new TenantAdapter(this,tenantBEANList);
-//        rcv_listTenant.setAdapter(mTenantAdapter);
-//    }
 
 
     public int getDayLeft(String Expire_date){
@@ -146,46 +85,6 @@ public class AdminListTenantActivity extends AppCompatActivity {
         return formatDateTime;
     }
 
-
-//    private  void getListTenat(){
-//        List<Booking> LBooking = new ArrayList<>();
-//        List<User> LUser = new ArrayList<>();
-//
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("User");
-//        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot ds : snapshot.getChildren()) {
-//                    User u = ds.getValue(User.class);
-//                    LUser.add(u);
-//                }
-//                DatabaseReference myRef1 = database.getReference("Booking");
-//                myRef1.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        for (DataSnapshot ds : snapshot.getChildren()) {
-//                            Booking u1 = ds.getValue(Booking.class);
-//                            LBooking.add(u1);
-//                        }
-//                        rcv_listTenant( LBooking,  LUser);
-//                        mTenantAdapter.notifyDataSetChanged();
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-//            }
-//
-//
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//    }
+    
 }
 
