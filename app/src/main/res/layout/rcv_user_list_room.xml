@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_listRoom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/purple_200"
+    android:contentDescription="@string/app_name">
+
+    <TextView
+        android:id="@+id/tv_TotalBed"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:text="  Number or beds : "
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Acreage" />
+
+    <TextView
+        android:id="@+id/tv_BedUse"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:text="  Number of beds in use : "
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_TotalBed" />
+
+
+    <TextView
+        android:id="@+id/tv_UserRoomPrice"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:text="  Price: "
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_BedUse" />
+
+
+    <TextView
+        android:id="@+id/tv_UserRoomName"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="  Area Name : "
+        android:textColor="@color/purple_700"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Acreage"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:text="  Acreage : "
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_UserRoomName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
