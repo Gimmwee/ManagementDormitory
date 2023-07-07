@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1013061993432",
+    "project_id": "managementdormitory-890c7",
+    "storage_bucket": "managementdormitory-890c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013061993432:android:826cf53ae98af8f0ed68ad",
+        "android_client_info": {
+          "package_name": "com.example.managementdormitory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013061993432-npv6p41tdv091q2ggail6oan3adj87n3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYSdtoICjGclz9g4fbfOODA9nBl72Ks7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013061993432-npv6p41tdv091q2ggail6oan3adj87n3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
