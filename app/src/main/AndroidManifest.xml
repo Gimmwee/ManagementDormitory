@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ManagementDormitory"
         tools:targetApi="31">
         <activity
+            android:name=".AdminDetailActivityRoom"
+            android:exported="false" />
+        <activity
+            android:name=".AdminCreateRoomActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
@@ -29,9 +35,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
