@@ -15,6 +15,7 @@ import com.example.managementdormitory.Dao.DaoRoom;
 import com.example.managementdormitory.Model.Room;
 import com.example.managementdormitory.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
+
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -89,7 +90,7 @@ public class AdminCreateRoomActivity extends AppCompatActivity {
                                                 Droom.add(room).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
                                                     public void onSuccess(Void unused) {
-                                                        Toast.makeText(AdminCreateRoom.this, "Create successful", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(AdminCreateRoomActivity.this, "Create successful", Toast.LENGTH_SHORT).show();
                                                         Intent i = new Intent(getApplicationContext(), AdminListRoomActivity.class);
                                                         startActivity(i);
                                                         return;
@@ -97,7 +98,7 @@ public class AdminCreateRoomActivity extends AppCompatActivity {
                                                 }).addOnFailureListener(new OnFailureListener() {
                                                     @Override
                                                     public void onFailure(@NonNull Exception e) {
-                                                        Toast.makeText(AdminCreateRoom.this, "Create fail", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(AdminCreateRoomActivity.this, "Create fail", Toast.LENGTH_SHORT).show();
                                                     }
                                                 });
                                             }

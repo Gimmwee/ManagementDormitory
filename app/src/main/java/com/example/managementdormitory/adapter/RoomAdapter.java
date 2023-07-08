@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.managementdormitory.AdminDetailActivityRoom;
 import com.example.managementdormitory.Model.Room;
 import com.example.managementdormitory.R;
 

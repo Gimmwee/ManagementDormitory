@@ -13,6 +13,21 @@
         android:theme="@style/Theme.ManagementDormitory"
         tools:targetApi="31">
         <activity
+            android:name=".AdminListTenantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRejectRoom"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEditRoom"
+            android:exported="false" />
+        <activity
             android:name=".AdminDetailActivityRoom"
             android:exported="false" />
         <activity
