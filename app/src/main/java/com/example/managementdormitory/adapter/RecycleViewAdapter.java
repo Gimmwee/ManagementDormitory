@@ -45,7 +45,17 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     public void onBindViewHolder(@NonNull HistoryViewHolder holder, int position) {
         HistoryBEAN his = listHistory.get(position);
 
-
+        holder.tv_house_name.setText(his.getHouse_name());
+        holder.tv_room_name.setText("Phòng : " +his.getRoom_name());
+        holder.tv_room_area.setText("Diện tích : " +his.getRoom_area());
+        holder.tv_room_floor.setText("Tầng : " +his.getRoom_floor());
+        holder.tv_room_address.setText(his.getHost_address());
+        holder.tv_host_name.setText(his.getHost_name());
+        holder.tv_host_phone.setText("LH : "+his.getHost_phone());
+        holder.tv_create_at.setText("Ngày thuê : "+his.getCreate_date());
+        holder.tv_expire_date.setText("Ngày hết hạn :" +his.getExpire_date());
+        holder.tv_room_price.setText("Giá :" +his.getRoom_price());
+        holder.tv_day_left.setText(his.getDayLeft());
 
     }
 
