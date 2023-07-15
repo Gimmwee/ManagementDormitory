@@ -151,4 +151,24 @@ public class Booking implements Serializable {
         String formatDateTime = now.format(formatter);
         return formatDateTime;
     }
+    /*DaoBooking daoBooking = new DaoBooking();
+    DaoHistory_Booking daoHistory_booking = new DaoHistory_Booking();
+    User user = new User(1,"HE151132","Nguyen Minh Hoang","hoangnmhe151132@fpt.edu.vn","123456",1,User.Role.ADMIN,"software engineering");
+    Booking booking = new Booking(1,1,Booking.getCurrentDateTime(),Booking.Status.PROCESSING,1,1,"Luxury");
+    History_Booking history_booking = new History_Booking(1,1,"DA","P1",History_Booking.getCurrentDateTime());
+                daoHistory_booking.add(history_booking).addOnSuccessListener(new OnSuccessListener<Void>() {
+        @Override
+        public void onSuccess(Void unused) {
+            Toast.makeText(MainActivity.this, "Record is inserted", Toast.LENGTH_SHORT).show();
+        }
+    }).addOnFailureListener(new OnFailureListener() {
+        @Override
+        public void onFailure(@NonNull Exception e) {
+            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+        }
+    });
+
+}
+        });*/
 }

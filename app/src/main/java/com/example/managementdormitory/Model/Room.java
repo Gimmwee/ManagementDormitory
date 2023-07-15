@@ -16,7 +16,6 @@ public class Room implements Serializable {
     public enum Status{
         ACTIVE,INACTIVE
     }
-
     public Room() {
     }
 
