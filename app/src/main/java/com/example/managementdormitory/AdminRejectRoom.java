@@ -40,9 +40,97 @@ public class AdminRejectRoom extends AppCompatActivity {
         tv_RoomName = findViewById(R.id.tv_RRoom);
         btn_Reject = findViewById(R.id.btn_RRejecRoom);
         btn_Reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<Room> LlRoom = new ArrayList<>();
+                SessionManagement sessionManagement = new SessionManagement(getApplicationContext());
+                User u1 = sessionManagement.getUser();
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Room");
+                myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        LlRoom.clear();
+                        for (DataSnapshot ds : snapshot.getChildren()) {
+                            Room room = ds.getValue(Room.class);
+                            LlRoom.add(room);
+                        }
+                        for(int i = 0;i< LlRoom.size();i++){
+                            if(Integer.parseInt(LlRoom.get(i).getCurrent_slot()) ==0 &&
+                                    LlRoom.get(i).getRoom_name().equalsIgnoreCase(tv_RoomName.getText().toString())
+                                    && LlRoom.get(i).getStatus().equals(Room.Status.ACTIVE)
+                            ){
+                                Room room = new Room();
+                                room.setRoom_id(LlRoom.get(i).getRoom_id());
+                                room.setRoom_price(LlRoom.get(i).getRoom_price());
+                                room.setRoom_name(tv_RoomName.getText().toString());
+                                room.setRoom_area(LlRoom.get(i).getRoom_area());
+                                room.setCurrent_slot(LlRoom.get(i).getCurrent_slot());
+                                room.setMax_slot(LlRoom.get(i).getMax_slot());
+                                room.setRoom_floor(LlRoom.get(i).getRoom_floor());
+                                room.setUser_id(LlRoom.get(i).getUser_id());
+                                room.setNote(LlRoom.get(i).getNote());
+                                room.setStatus(Room.Status.INACTIVE);
+                                DaoRoom Droom = new DaoRoom();
+                                Droom.add(room).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
 
+                                        Toast.makeText(getApplicationContext(), "Change Successfull", Toast.LENGTH_SHORT).show();
+                                        Intent i = new Intent(getApplicationContext(), AdminListRoomActivity.class);
+                                        startActivity(i);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getApplicationContext(), " Change Fail", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }else{
+                                Toast.makeText(getApplicationContext(), " Change Fail", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
         btn_Active = findViewById(R.id.btn_RActive);
+        btn_Active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<Room> LlRoom = new ArrayList<>();
 
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Room");
+                myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        LlRoom.clear();
+                        for (DataSnapshot ds : snapshot.getChildren()) {
+                            Room room = ds.getValue(Room.class);
+                            LlRoom.add(room);
+                        }
+                        for(int i = 0;i< LlRoom.size();i++){
+                            if(Integer.parseInt(LlRoom.get(i).getCurrent_slot()) ==0 &&
+                                    LlRoom.get(i).getRoom_name().equalsIgnoreCase(tv_RoomName.getText().toString())
+                                    && LlRoom.get(i).getStatus().equals(Room.Status.INACTIVE)){
+                                Room room = new Room();
+                                room.setRoom_id(LlRoom.get(i).getRoom_id());
+                                room.setRoom_price(LlRoom.get(i).getRoom_price());
+                                room.setRoom_name(LlRoom.get(i).getRoom_name());
+                                room.setRoom_area(LlRoom.get(i).getRoom_area());
+                                room.setCurrent_slot(LlRoom.get(i).getCurrent_slot());
+                                room.setMax_slot(LlRoom.get(i).getMax_slot());
+                                room.setRoom_floor(LlRoom.get(i).getRoom_floor());
+                                room.setUser_id(LlRoom.get(i).getUser_id());
+                                room.setNote(LlRoom.get(i).getNote());
+                                room.setStatus(Room.Status.ACTIVE);
+                                DaoRoom Droom = new DaoRoom();
                                 Droom.add(room).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
@@ -68,7 +156,9 @@ public class AdminRejectRoom extends AppCompatActivity {
 
                     }
                 });
-
+            }
+        });
+    }
     private ImageView signOut_button6;
     private void Logout1(){
         signOut_button6 = findViewById(R.id.logout_a6);
