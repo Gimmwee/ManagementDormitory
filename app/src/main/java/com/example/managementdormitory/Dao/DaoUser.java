@@ -1,6 +1,6 @@
 package com.example.managementdormitory.Dao;
 
-import com.example.management_dormitory.Model.User;
+import com.example.managementdormitory.Model.User;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

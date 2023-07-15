@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ManagementDormitory</string>
+    <string name="default_web_client_id" translatable="false">94992078742-chd0d585tr375bn5u5v2gb94p4vs6g7t.apps.googleusercontent.com</string>
+
 </resources>

@@ -1,10 +1,12 @@
 package com.example.managementdormitory;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -25,9 +27,12 @@ import java.util.Arrays;
 public class FacebookAuthActivity extends LoginActivity {
     CallbackManager callbackManager;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+            super.onCreate(savedInstanceState);
+
         callbackManager = CallbackManager.Factory.create();
         LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
         LoginManager.getInstance().registerCallback(callbackManager,

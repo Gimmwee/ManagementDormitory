@@ -2,11 +2,13 @@ package com.example.managementdormitory;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -21,12 +23,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class GoogleSignInActivity extends com.example.management_dormitory.LoginActivity {
+public class GoogleSignInActivity extends com.example.managementdormitory.LoginActivity {
     private GoogleSignInClient client;
     private static final  int RC_SIGN_IN = 1234;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
     ProgressDialog progressDialog;
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

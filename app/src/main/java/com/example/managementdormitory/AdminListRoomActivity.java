@@ -2,12 +2,12 @@ package com.example.managementdormitory;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -54,7 +54,7 @@ public class AdminListRoomActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        btn_RejectRoom = findViewById(R.id.btn_RejectRoom);
+        btn_RejectRoom = (Button)findViewById(R.id.btn_RejectRoom);
         btn_RejectRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

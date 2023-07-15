@@ -1,17 +1,15 @@
 package com.example.managementdormitory;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.facebook.login.Login;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class AdminMainActivity extends AppCompatActivity {
 

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.managementdormitory.Dao.DaoRoom;
 import com.example.managementdormitory.Model.Room;
 import com.example.managementdormitory.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
