@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_gradient_drawable"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHeader"
+        android:layout_width="408dp"
+        android:layout_height="50dp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="List Room (Admin)"
+        android:textColor="#000000"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/admin_listroom"
+        android:layout_width="408dp"
+        android:layout_height="482dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="409dp"
+        android:layout_height="80dp"
+        android:background="@drawable/my_gradient1_drawable"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="208dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_user1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_action_profile_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/logout_a7"
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_action_logout_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_AddRoom"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:text="Create Room"
+        app:layout_constraintBottom_toTopOf="@+id/admin_listroom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader" />
+
+    <Button
+        android:id="@+id/btn_EditRoom"
+        android:layout_width="103dp"
+        android:layout_height="56dp"
+        android:text="Edit Room"
+        app:layout_constraintBottom_toTopOf="@+id/admin_listroom"
+        app:layout_constraintEnd_toStartOf="@+id/btn_RejectRoom"
+        app:layout_constraintStart_toEndOf="@+id/btn_AddRoom"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_RejectRoom"
+        android:layout_width="119dp"
+        android:layout_height="59dp"
+        android:text="Reject Room"
+        app:layout_constraintBottom_toTopOf="@+id/admin_listroom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
