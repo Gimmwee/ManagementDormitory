@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.managementdormitory.Model.User;
+import com.google.gson.Gson;
 
 public class SessionManagement {
     private SharedPreferences pref;

@@ -19,9 +19,6 @@
             android:name=".BookingActivity"
             android:exported="false" />
         <activity
-            android:name=".BookingRoomAtivity"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
