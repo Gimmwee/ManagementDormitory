@@ -45,6 +45,13 @@ public class SessionManagement {
         return pref.getBoolean(KEY_IS_LOGGEDIN, false);
     }
 
+<<<<<<< HEAD
+=======
+    public boolean isSessionExpired(){
+        long expireTimeMillis = pref.getLong(KEY_EXPIRES_AT, -1);
+        return (System.currentTimeMillis() >= expireTimeMillis);
+    }
+>>>>>>> KienDC
 
     public User getUser(){
         String userJson = pref.getString(KEY_USER, "");
@@ -53,4 +60,13 @@ public class SessionManagement {
         return user;
     }
 
+<<<<<<< HEAD
 }
+=======
+    public void logoutUser(){
+        // Clearing all data from Shared Preferences
+        editor.clear();
+        editor.commit();
+    }
+}
+>>>>>>> KienDC
