@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="imgBtBooking" type="id">1</item>
+    <item name="textView6" type="id">1</item>
+    <item name="btBooking" type="id">2</item>
+    <item name="spRoomtype" type="id">3</item>
+    <item name="textView5" type="id">txt5</item>
+    <item name="textView3" type="id">txt3</item>
+    <item name="edtName" type="id">edtname</item>
+    <item name="edtDate" type="id">edtdate</item>
+    <item name="edtNote" type="id">edtnote</item>
 </resources>

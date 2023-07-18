@@ -71,18 +71,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         private TextView tv_house_name,tv_room_name,tv_room_area,tv_room_floor,tv_room_address,tv_host_name,tv_host_phone,tv_create_at,tv_expire_date,tv_room_price,tv_day_left;
         public HistoryViewHolder(@NonNull View itemView) {
             super(itemView);
-//            tv_room_floor = itemView.findViewById(R.id.tv_room_floor);
-//            tv_house_name = itemView.findViewById(R.id.tv_house_name);
-//            tv_room_name = itemView.findViewById(R.id.tv_room_name);
-//            tv_room_area = itemView.findViewById(R.id.tv_room_area);
-//            tv_room_address = itemView.findViewById(R.id.tv_room_address);
-//            tv_host_name = itemView.findViewById(R.id.tv_host_name);
-//            tv_host_phone = itemView.findViewById(R.id.tv_host_phone);
-//            tv_create_at = itemView.findViewById(R.id.tv_create_at);
-//            tv_expire_date = itemView.findViewById(R.id.tv_expire_date);
-//            tv_room_price = itemView.findViewById(R.id.tv_room_price);
-//            tv_day_left = itemView.findViewById(R.id.tv_day_left);
-
             itemView.setOnClickListener(this);
         }
 

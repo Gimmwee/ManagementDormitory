@@ -63,10 +63,6 @@ public class RecycleViewAdapterUser extends RecyclerView.Adapter<RecycleViewAdap
         private TextView email,name,major,role;
         public HistoryViewHolder(@NonNull View itemView) {
             super(itemView);
-//            email = itemView.findViewById(R.id.email);
-//            name = itemView.findViewById(R.id.name);
-//            major = itemView.findViewById(R.id.major);
-//            role = itemView.findViewById(R.id.role);
             itemView.setOnClickListener(this);
         }
 
