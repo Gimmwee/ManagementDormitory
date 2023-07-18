@@ -85,6 +85,6 @@ public class AdminListTenantActivity extends AppCompatActivity {
         return formatDateTime;
     }
 
-    
+
 }
 
